@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="choice" onchange="changeLang()">
+		<option value="select">選択してください</option>
+		<option value="selected_jpn">日本語</option>
+		<option value="selected_en">English</option>
+		<option value="selected_all">全て表示</option>
+	</select>
+    <table>
+        <tr>
+            <th id="japanese">日本</th>
+            <td>こんにちは</td>
+            <td>ありがとう</td>
+            <td>さようなら</td>
+        </tr>
+        <tr>
+            <th id="english">English</th>
+            <td>Hello</td>
+            <td>Thank you</td>
+            <td>Good Bye</td>
+        </tr>
+    </table>
+
+    <script>
+        function changeLang() {
+            var value = document.getElementById("choice").value;
+            var japanese = document.getElementById("japanese");
+            var english = document.getElementById("english");
+            if (value == "selected_jpn") {
+                english.style.display = "none";
+                japanese.style.display = "block";
+            } else if (value == "selected_en") {
+
+            } else {
+
+            }
+        }
+    </script>
+</body>
+
+</html>
